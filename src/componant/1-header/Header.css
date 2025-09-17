@@ -1,0 +1,159 @@
+header {
+  justify-content: space-between;
+  height: 100px;
+  padding: 0 2.4rem;
+  align-items: center;
+}
+/* start navbar style  */
+header nav {
+  background-color: var(--nav-bg);
+  padding: 0.77rem 1.6em;
+  border-radius: 55px;
+  box-shadow: 1px 1px 20px var(--blue);
+}
+.light header nav{
+  box-shadow: 1px 1px 8px #333;
+}
+header nav ul {
+  gap: 16px;
+}
+header nav ul li a {
+  color: var(--a-color);
+  opacity: 0.9;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: 0.4s;
+}
+header nav ul li a:hover {
+  color: var(--blue);
+  opacity: 1;
+}
+header button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 1.1rem;
+  padding: 8px;
+  /* border: 2px solid transparent; */
+  transition: 0.5s;
+  background-color: var(--nav-bg);
+  border: 2px solid var(--p-color);
+  color: var(--p-color);
+  border-radius: 50%;
+  text-align: center;
+}
+header button.menu {
+  display: none;
+  background-color: var(--nav-bg);
+  color: var(--p-color);
+  border-radius: 50%;
+}
+.light header button.menu:hover{
+  border: 2px solid #333333ad;
+  box-shadow: 1px 1px 10px #333333ad;
+}
+header button.menu:hover {
+  color: var(--a-color);
+  border: 2px solid var(--blue);
+  box-shadow: 1px 1px 20px var(--blue);
+}
+/* icon mode button */
+header .mode:hover {
+  color: var(--a-color);
+  border: 2px solid var(--blue);
+  box-shadow: 1px 1px 20px var(--blue);
+}
+header button.mode span {
+  font-size: 20x;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.light header button.mode {
+  color: var(--sun-hover);
+  border: 2px solid #464e56c1;
+}
+.light header button.mode:hover {
+  color: var(--sun-hover);
+  border: 2px solid var(--sun-hover);
+  box-shadow: 1px 1px 20px #464e56c1;
+}
+/* End navbar style  */
+/* start model  */
+header .fixed {
+  position: fixed;
+  inset: 0;
+  background-color: #282938d7;
+  z-index: 99;
+  backdrop-filter: blur(4px);
+}
+@keyframes modal {
+  0% {
+    scale: 0;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+header .fixed ul.modal {
+  width: 85%;
+  margin: 3rem auto 0;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--secondryColor);
+  border: 3px solid var(--blue);
+  animation: modal 0.9s 1;
+}
+header ul.modal li {
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.7rem;
+  padding-top: 0.5rem;
+}
+header ul.modal li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  padding-top: 0.2rem;
+}
+header ul.modal li:first-child {
+  display: flex;
+  border: none;
+  justify-content: end;
+}
+header ul.modal li a {
+  transition: 0.5s;
+  font-size: 1rem;
+  color: var(--p-color);
+}
+
+header ul.modal li a:hover {
+  color: var(--blue);
+  opacity: 1;
+  font-size: 1.2rem;
+}
+ul.modal li button.Cmodal {
+  background-color: var(--nav-bg);
+  color: var(--p-color);
+  border-radius: 50%;
+  transition: 0.5s;
+}
+ul.modal li button.Cmodal:hover {
+  color: crimson;
+  box-shadow: 1px 1px 20px crimson;
+  rotate: 180deg;
+}
+/* End modal  */
+
+/* Responsive media */
+@media (max-width: 700px) {
+  header nav {
+    display: none;
+  }
+  header button.menu {
+    display: block;
+  }
+}

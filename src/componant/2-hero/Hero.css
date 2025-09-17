@@ -1,0 +1,83 @@
+section.hero {
+  margin-top: 3rem;
+  align-items: center;
+  justify-content: space-between;
+}
+section.hero div.desc {
+  flex-grow: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 10px;
+}
+section.hero div.desc .image {
+  align-items: end;
+  gap: 0.3rem;
+}
+
+section.hero div.image img {
+  width: 150px;
+  border-radius: 50%;
+  border: 1px solid var(--blue);
+  padding: 2px;
+  box-shadow: 2px 2px 20px var(--blue);
+}
+section.hero div.image .virefied {
+  color: var(--blue);
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.hero div.text {
+  line-height: 1.5;
+}
+
+.hero div.text h1.title {
+  color: var(--blue);
+  font-size: 32px;
+  text-transform: capitalize;
+}
+.hero div.text h2.about {
+  color: var(--a-color);
+  font-size: 22px;
+  letter-spacing: -0.6px;
+  font-weight: 400;
+}
+
+.hero div.text p {
+  color: var(--p-color);
+  font-size: 15px;
+  letter-spacing: -0.4px;
+  font-weight: normal;
+}
+
+.hero div.icons {
+  display: flex;
+  gap: 16px;
+  margin: 0 10px;
+  font-size: 20px;
+  border-radius: 50%;
+}
+.hero div.icons a {
+  transition: 0.3s;
+  color: var(--p-color);
+}
+
+.hero div.icons a:hover {
+  color: var(--hover-icon);
+  font-size: 1.5rem;
+}
+/* responsive media  */
+@media (max-width: 700px) {
+  .hero .desc {
+    text-align: center;
+    align-items: center;
+  }
+  .hero div.text p {
+    display: none;
+  }
+  section.hero{
+    flex-wrap: wrap;
+  }
+}

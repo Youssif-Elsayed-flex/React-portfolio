@@ -1,0 +1,53 @@
+footer {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+footer ul {
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+footer ul li a{
+  color: var(--a-color);
+  font-size: 1rem;
+  transition: 0.5s;
+}
+footer ul li a:hover{
+  color: var(--blue);
+}
+footer p{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--p-color);
+}
+footer p span{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--blue);
+}
+
+
+/* responsive code */
+@media (max-width:770px) {
+    footer{
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    footer p {
+        justify-content: center;
+    gap: 3px;
+    align-items: start;
+
+}
+    footer p span{
+        gap: 0;
+    align-items: start;
+
+}
+
+}
